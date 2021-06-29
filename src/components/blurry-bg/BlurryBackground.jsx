@@ -4,8 +4,6 @@ import "./BlurryBackground.css";
 const BlurryBackground = (props) => {
   const { imgBackgroundUrl, imgCircleUrl } = props;
 
-  console.log(props);
-
   const defaultCircle = () => {
     return (
       <svg className="background__ball">
@@ -27,7 +25,6 @@ const BlurryBackground = (props) => {
   return (
     <Fragment>
       <div className="background__blur"></div>
-      {console.log(typeof imgCircleUrl)}
       {typeof imgCircleUrl === typeof "" ? imageCircle() : defaultCircle()}
       <img src={imgBackgroundUrl} className="background__img"></img>
     </Fragment>

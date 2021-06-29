@@ -1,14 +1,19 @@
 import React from "react";
-import { Fragment } from "react";
-import { Link, Route } from "wouter";
-import Home from "./pages/Home";
+import Home from "./pages/HomePage/Home";
+import { Route } from "wouter";
 import "./globals.css";
+import { Fragment } from "react-is";
 
 function App() {
   return (
-    <div className="wrapper">
-      <Home />
-    </div>
+    <Fragment>
+      <Route path="/">
+        <Home />
+      </Route>
+      <Route path="/test">
+        <Home />
+      </Route>
+    </Fragment>
   );
 }
 
